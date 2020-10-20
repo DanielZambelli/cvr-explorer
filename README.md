@@ -6,13 +6,13 @@ CVR Explorer is a library for integrating with the [danish business register (CV
 * Returns data in simple or more complex raw format
 * Supports streaming to file for data export jobs
 
-## Get started - Get access
+## Get started
 Request access for "system-til-system-adgang-til-cvr-data" via email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before you receive the account details.
 
 ## Usage
 Fetch 250 businesses from capital region.
 ``` js
-//ensure environment variable `CVR_AUTHENTICATION` has been setup to the secret from the step above.
+//ensure environment variable `CVR_AUTHENTICATION` is set to the account secret you receive in the step above.
 
 const CvrEx = require('cvr-explorer')
 
