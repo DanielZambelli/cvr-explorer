@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapAddress returns expected keys 1`] = `
+Array [
+  "street",
+  "city",
+  "postal",
+  "coAddress",
+]
+`;
+
+exports[`mapAddress returns expected keys also when nothing is passed 1`] = `
+Array [
+  "street",
+  "city",
+  "postal",
+  "coAddress",
+]
+`;
+
+exports[`mapAddress returns expected keys also when nothing is passed 2`] = `
+Array [
+  "street",
+  "city",
+  "postal",
+  "coAddress",
+]
+`;
