@@ -47,10 +47,33 @@ CvrEx.fetchAnnualReports(32345794)
 * names: array of string, request hits that match business names e.g. ["dkwebhost","mærsk a/s"]
 * branchCodes: array of int, e.g. [99900000]
 * types: array of string, e.g. [ CvrEx.TYPES.AS, CvrEx.TYPES.ENK ]
-* regions: e.g. [ CvrEx.REGIONS.CAPITAL ]
-* employees: e.g. [ CvrEx.EMPLOYEES.I_0_0, CvrEx.EMPLOYEES.I_1_1 ]
+  * CvrEx.TYPES.AS
+  * CvrEx.TYPES.APS
+  * CvrEx.TYPES.ENK
+  * CvrEx.TYPES.IVS
+  * CvrEx.TYPES.IS
+  * CvrEx.TYPES.AS
+* regions: array of string, e.g. [ CvrEx.REGIONS.CAPITAL ]
+  * CvrEx.REGIONS.CAPITAL
+  * CvrEx.REGIONS.ZELAND
+  * CvrEx.REGIONS.MIDDLE
+  * CvrEx.REGIONS.NORTH
+  * CvrEx.REGIONS.SOUTH
+* employees: array of string, e.g. [ CvrEx.EMPLOYEES.I_0_0, CvrEx.EMPLOYEES.I_1_1 ]
+  * CvrEx.EMPLOYEES.I_0_0
+  * CvrEx.EMPLOYEES.I_1_1
+  * CvrEx.EMPLOYEES.I_2_4
+  * CvrEx.EMPLOYEES.I_5_9
+  * CvrEx.EMPLOYEES.I_10_19
+  * CvrEx.EMPLOYEES.I_20_49
+  * CvrEx.EMPLOYEES.I_50_99
+  * CvrEx.EMPLOYEES.I_100_199
+  * CvrEx.EMPLOYEES.I_200_499
+  * CvrEx.EMPLOYEES.I_500_999
+  * CvrEx.EMPLOYEES.I_1000_999999
 
 ## Tech stack 
 NodeJs, JavaScript, ElasticSearch Queries, CVR cloud solution:
 * https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-cvr-data
 * https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-regnskabsdata
+* http://distribution.virk.dk/cvr-permanent/_mapping
