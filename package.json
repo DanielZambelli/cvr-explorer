@@ -2,10 +2,20 @@
   "name": "cvr-explorer",
   "version": "1.1.0",
   "description": "JavaScript/SDK for integrating with the danish business register (CVR) making it effortless to fetch and export business data and annual reports.",
-  "main": "main.js",
+  "main": "index.js",
+  "keywords": ["cvr","cvr-explored","business","dansk","danish"],
+  "homepage": "https://github.com/danielzambelli/cvr-explorer",
+  "bugs": {
+    "url": "https://github.com/danielzambelli/cvr-explorer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielzambelli/cvr-explorer"
+  },
   "scripts": {},
-  "author": "Daniel Zambelli",
+  "author": "Daniel Zambelli (https://danielzambelli.dk)",
   "license": "ISC",
+  "private": false,
   "devDependencies": {
     "jest": "26.4.0"
   },
@@ -14,5 +24,9 @@
     "dk-postals": "1.0.0",
     "node-fetch": "2.6.0",
     "uuid": "8.3.1"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "enginesStrict": true
 }
