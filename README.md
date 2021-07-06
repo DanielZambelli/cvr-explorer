@@ -1,26 +1,28 @@
 # CVR EXPLORER
-CVR Explorer is a library for integrating with the [danish business register (CVR)](https://datacvr.virk.dk/data/) and helps developers to effortlessly fetch and export business data and annual reports for businesses in Denmark.
+JavaScript/SDK for integrating with the [danish business register (CVR)](https://datacvr.virk.dk/data/) making it effortless to fetch and export business data and annual reports. 
 
 * Search, Find, Segment businesses by name, branch, region... See options below.
-* Library abstracts ElasticSearch queries 
-* Returns data in simple or more complex raw format
-* Supports streaming to file for data export jobs
+* Option to get data in simple or raw format
+* Supports individual look up or streaming to file for data export jobs
 
 ## Get started
-Request access for "system-til-system-adgang-til-cvr-data" via email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before you receive the account details.
+Request access for "system-til-system-adgang-til-cvr-data" by email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before you receive your account details.
+
+## Authorize
+Once you have recived your credentials, you can authorize and access the service by setting environment variable: 
+```
+CVR_KEY=YOUR_USERNAME:YOUR_PASSWORD
+```
 
 ## Usage
 Fetch 250 businesses from capital region.
 ``` js
-//ensure environment variable `CVR_AUTHENTICATION` is set to the account secret you receive in the step above.
-
 const CvrEx = require('cvr-explorer')
 
-CvrEx.fetchBusinesses({ limit: 250, regions: [ CvrEx.REGIONS.CAPITAL ] })
-  .then(console.log)
+CvrEx.fetchBusinesses({ limit: 250, regions: [ CvrEx.REGIONS.CAPITAL ] }).then(console.log)
 ```
 
-Stream 250.000 businesses from capital region to file. Data chunks are seperated by delimiter. Data are not mapped but kept in its raw format.
+Stream 250.000 businesses from capital region to file. Data chunks are seperated by delimiter. Data are kept in its raw format.
 ``` js
 CvrEx.fetchBusinessesToFile({ 
   dir: __dirname,
@@ -28,14 +30,12 @@ CvrEx.fetchBusinessesToFile({
   raw: true, 
   limit: 250000, 
   regions: [ CvrEx.REGIONS.CAPITAL ] 
-})
-  .then(filePath => console.log(filePath))
+}).then(filePath => console.log(filePath))
 ```
 
 Fetches annual reports for a business by its cvr.
 ``` js
-CvrEx.fetchAnnualReports(32345794)
-  .then(console.log)
+CvrEx.fetchAnnualReports(32345794).then(console.log)
 ```
 
 ## Options
@@ -73,7 +73,7 @@ CvrEx.fetchAnnualReports(32345794)
   * CvrEx.EMPLOYEES.I_1000_999999
 
 ## Tech stack 
-NodeJs, JavaScript, ElasticSearch Queries, CVR cloud solution:
+JavaScript, ElasticSearch Queries, Jest, CVR cloud solution:
 * https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-cvr-data
 * https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-regnskabsdata
 * http://distribution.virk.dk/cvr-permanent/_mapping
