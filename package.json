@@ -1,15 +1,13 @@
 {
   "name": "cvr-explorer",
-  "version": "1.0.0",
-  "description": "CVR Explorer is a library for integrating with the danish business register (CVR) and helps developers to directly and effortlessly pull business data and annual reports for businesses in Denmark.",
+  "version": "1.1.0",
+  "description": "JavaScript/SDK for integrating with the danish business register (CVR) making it effortless to fetch and export business data and annual reports.",
   "main": "main.js",
   "scripts": {},
   "author": "Daniel Zambelli",
   "license": "ISC",
   "devDependencies": {
-    "jest": "26.4.0",
-    "cors": "2.8.5",
-    "express": "4.17.1"
+    "jest": "26.4.0"
   },
   "dependencies": {
     "dotenv": "8.1.0",
