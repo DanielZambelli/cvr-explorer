@@ -1,5 +1,5 @@
 # CVR EXPLORER
-Fetch and export business data and annual reports from the [danish business register (CVR)](https://datacvr.virk.dk/data/)- easier than ever!
+Fetch and export business data and annual reports from the [danish business register (CVR)](https://datacvr.virk.dk/data/), easier than ever!
 
 * Search, find, segment by name, branch, region...
 * Supports raw and normalized format...
