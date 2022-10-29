@@ -1,17 +1,21 @@
 # CVR EXPLORER
-JavaScript/SDK for integrating with the [danish business register (CVR)](https://datacvr.virk.dk/data/) making it effortless to fetch and export business data and annual reports. 
+Fetch and export business data and annual reports from the [danish business register (CVR)](https://datacvr.virk.dk/data/)- easier than ever!
 
-* Search, Find, Segment businesses by name, branch, region... See options below.
-* Option to get data in simple or raw format
-* Supports individual look up or streaming to file for data export jobs
+* Search, find, segment by name, branch, region...
+* Supports raw and normalized format...
+* Supports look up or streaming to file for data export jobs...
+
+<p align="left">
+  <img width="150px" src="https://raw.githubusercontent.com/DanielZambelli/cvr-explorer/master/icon.png" />
+</p>
 
 ## Get started
-Request access for "system-til-system-adgang-til-cvr-data" by email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before you receive your account details.
+Request access for "system-til-system-adgang-til-cvr-data" by email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before receiving your account credentials.
 
 ## Authorize
-Once you have recived your credentials, you can authorize and access the service by setting environment variable: 
+Access the service by setting environment variable using your account: 
 ```
-CVR_KEY=YOUR_USERNAME:YOUR_PASSWORD
+CVR_KEY=USERNAME:PASSWORD
 ```
 
 ## Usage
@@ -26,7 +30,7 @@ Stream 250.000 businesses from capital region to file. Data chunks are seperated
 ``` js
 CvrEx.fetchBusinessesToFile({ 
   dir: __dirname,
-  delimiter: '^^',
+  delimiter: ',',
   raw: true, 
   limit: 250000, 
   regions: [ CvrEx.REGIONS.CAPITAL ] 
@@ -72,8 +76,7 @@ CvrEx.fetchAnnualReports(32345794).then(console.log)
   * CvrEx.EMPLOYEES.I_500_999
   * CvrEx.EMPLOYEES.I_1000_999999
 
-## Tech stack 
-JavaScript, ElasticSearch Queries, Jest, CVR cloud solution:
+## Sources
 * https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-cvr-data
 * https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-regnskabsdata
 * http://distribution.virk.dk/cvr-permanent/_mapping
