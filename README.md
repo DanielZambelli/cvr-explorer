@@ -10,10 +10,10 @@ Fetch and export business data and annual reports from the [danish business regi
 </p>
 
 ## Get started
-Request access for "system-til-system-adgang-til-cvr-data" by email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before receiving your account credentials.
+Request access for "system-til-system-adgang-til-cvr-data" by email to [cvrselvbetjening@erst.dk](mailto:cvrselvbetjening@erst.dk). It is free but may take a couple of weeks before you receive the account.
 
 ## Authorize
-Access the service by setting environment variable using your account: 
+Set the env var to access the service:
 ```
 CVR_KEY=USERNAME:PASSWORD
 ```
