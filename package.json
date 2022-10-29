@@ -1,7 +1,7 @@
 {
   "name": "cvr-explorer",
-  "version": "1.2.0",
-  "description": "Fetch and export business data and annual reports from the danish business register (CVR) - easier than ever!",
+  "version": "1.2.1",
+  "description": "Fetch and export business data and annual reports from the danish business register (CVR), easier than ever!",
   "main": "index.js",
   "keywords": ["cvr","cvr-explored","business","dansk","danish","data","business data"],
   "homepage": "https://github.com/danielzambelli/cvr-explorer",
