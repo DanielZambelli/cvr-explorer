@@ -1,32 +1,13 @@
 {
   "name": "cvr-explorer",
-  "version": "1.2.1",
-  "description": "Fetch and export business data and annual reports from the danish business register (CVR), easier than ever!",
-  "main": "index.js",
+  "version": "2.0.1",
+  "description": "Unlock danish company data in minutes with CVR Explorer.",
   "keywords": ["cvr","cvr-explored","business","dansk","danish","data","business data"],
-  "homepage": "https://github.com/danielzambelli/cvr-explorer",
-  "bugs": {
-    "url": "https://github.com/danielzambelli/cvr-explorer/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/danielzambelli/cvr-explorer"
-  },
+  "homepage": "https://danielzambelli.dk/cvr",
   "scripts": {},
   "author": "Daniel Zambelli (https://danielzambelli.dk)",
   "license": "ISC",
   "private": false,
-  "devDependencies": {
-    "jest": "26.4.0"
-  },
-  "dependencies": {
-    "dotenv": "8.1.0",
-    "dk-postals": "1.0.0",
-    "node-fetch": "2.6.0",
-    "uuid": "8.3.1"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "enginesStrict": true
+  "dependencies": {},
+  "engines": {}
 }
